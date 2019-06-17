@@ -1,0 +1,41 @@
+<div class="page-wrapper">
+  <div class="page-header">
+    <h2 class="page-heading">Kanban Board</h2>
+    <span class="page-action-btn">Add stage</span>
+</div>
+  <div class="kanban-container">
+    <div class="kanban-list-group" cdkDropListGroup>
+      <div class="kanban-list" cdkDropList [cdkDropListData]="project1" (cdkDropListDropped)="drop($event)">
+        <div class="kanban-list-header">
+          <h4 class="kanban-list-heading">Test</h4>
+        </div>
+        <div class="kanban-card no-drag">
+          <span class="kanban-card-tag" contenteditable="true"></span>
+          <h5 class="kanban-card-title" contenteditable="true"></h5>
+          <span class="kanban-save-btn" (click)="openSnackBar()" matRipple><mat-icon>add_circle</mat-icon></span>
+        </div>
+        <div class="kanban-card" *ngFor="let item of project1" cdkDrag>
+          <span class="kanban-card-tag">Low Priority</span>
+          <h5 class="kanban-card-title">{{item}}</h5>
+        </div>
+      </div>
+      <div class="kanban-list" cdkDropList [cdkDropListData]="project2" (cdkDropListDropped)="drop($event)">
+        <div class="kanban-list-header">
+          <h4 class="kanban-list-heading">Test</h4>
+        </div>
+        <div class="kanban-card" *ngFor="let item of project2" cdkDrag>
+          <span class="kanban-card-tag">Low Priority</span>
+          <h5 class="kanban-card-title">{{item}}</h5>
+        </div>
+      </div>
+      <div class="kanban-list empty-list">
+        <div class="kanban-list-header">
+          <h4 class="kanban-list-heading" contenteditable="true"></h4>
+        </div>
+        <div class="kanban-list-action">
+          <mat-icon class="list-add-btn">add_circle_outline</mat-icon>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
