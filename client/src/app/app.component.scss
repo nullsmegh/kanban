@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   background-image: linear-gradient(134deg, #9ea7fc 0%, #65b6f7 100%);
   outline:none;
+  cursor: text;
 }
 
 .kanban-card-title {
@@ -87,6 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 20px;
   color: #707090;
   outline:none;
+  cursor: text;
 }
 
 .kanban-container {
@@ -237,4 +239,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .kanban-list-action .list-add-btn {
     font-size: 50px;
+    height: 50px;
+    width: 50px;
 }
